@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> position - btn </title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .btn {
+            position: relative;
+            /* 기준점 */
+            width: 250px;
+            height: 80px;
+            background-color: #fff;
+            border: 1px solid #999;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin: 50px; 
+            transition: .5s; /* 추가 */ 
+        }
+        .btn:hover {background-color: rgba(0,0,0,0.2);} /* 추가 */
+
+        .btn a {display: block;} /* 추가 */
+        .btn a span.text{display: block; /* 수정 */
+            color: #000;
+            text-decoration: none;
+            position: absolute;
+            top: 24px; left: 30px;
+            font-size: 22px;
+        }
+        .btn a span.xi-arrow-right {display: block;
+            position: absolute;
+            top: 22px; right: 30px;
+            font-size: 30px;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .btn>a+span.arrow -->
+    <div class="btn">
+        <a href="#">
+            <span class="text">상세보기</span>
+            <span class="xi-arrow-right"></span>
+        </a>
+    </div>
+</body>
+
+</html>

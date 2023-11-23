@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 50px;
+            font-family: "Open Sans";
+            background-color: #f1f1f1;
+            color: #555;
+        }
+
+        .container {
+            margin-top: 35px;
+        }
+
+        .container .menu {
+            position: relative;
+            margin-top: 35px;
+            width: 700px;
+            display: flex;
+            text-align: center;
+            /* border: 1px solid red;  */
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .container .menu a {
+            position: relative;
+            display: block;
+            padding: 16px 0 38px;
+            /* 상단 좌우 하단 */
+            width: 20%;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 400;
+            color: #555;
+            transition: .7s;
+        }
+
+        .container .menu a:hover {
+            color: #8ac007;
+
+        }
+
+        .container .menu .effect {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            left: -12.5%;
+            transition: .7s;
+        }
+
+        .container.menu.dot a::after {
+            content: "";
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            height: 1px;
+            width: 100%;
+            background-color: #8ac007;
+        }
+
+        .container.menu.dot a::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #8ac007;
+            left: 50%;
+            bottom: 18px;
+            margin-left: 2px;
+        }
+
+
+
+        /* hover시 나오는 큰점 */
+        .menu.dot .effect {
+            margin-left: -6px;
+            bottom: 15px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8ac007;
+        }
+
+        .container .menu a:nth-child(1):hover ~ .effect{
+            left: 10%;
+        }
+        .container .menu a:nth-child(2):hover ~ .effect{
+            left: 30%;
+        }
+        .container .menu a:nth-child(3):hover ~ .effect{
+            left: 50%;
+        }
+        .container .menu a:nth-child(4):hover ~ .effect{
+            left: 70%;
+        }
+        .container .menu a:nth-child(5):hover ~ .effect{
+            left: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .container>nav.menu.line>a*5+div.effect -->
+    <div class="container">
+        <nav class="menu dot">
+            <a href="#">Corporation</a>
+            <a href="#">Products</a>
+            <a href="#">Customers</a>
+            <a href="#">Communication</a>
+            <a href="#">Career</a>
+            <div class="effect"></div>
+        </nav>
+    </div>
+</body>
+
+</html>
